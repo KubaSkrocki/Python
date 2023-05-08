@@ -1,12 +1,17 @@
-import os
+import matplotlib.pyplot as plt
+import numpy as np
 
-def main():
-  print("Hello from GitHub Actions!")
-  token = os.environ.get("AZURE_SECRET_TOKEN")
-  if not token:
-      raise RuntimeError("AZURE_SECRET_TOKEN env is not set!")
-  print("All good! we found our env var")
-  
-if __name__ == '__main__':
-  main()
+# Generate some data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create a scatter plot
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_title('Scatter Plot of Sine Wave')
+
+# Save the plot as a PNG file
+fig.savefig('plot.png')
 
