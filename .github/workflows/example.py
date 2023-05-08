@@ -1,7 +1,7 @@
 def main():
   print("Hellow from GitHub Actions!")
+  
+  
         
-        
-        
- if _name_ == '_main_':
-        main()
+ if __name__ == '__main__':
+    main()
