@@ -1,5 +1,10 @@
+import os
+
 def main():
   print("Hello from GitHub Actions!")
+  token = os.environ.get("AZURE_SECRET_TOKEN")
+      raise RuntimeError("AZURE_SECRET_TOKEN env is not set!")
+    print("All good! we found our env var")
   
 if __name__ == '__main__':
   main()
